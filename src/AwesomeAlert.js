@@ -1,18 +1,17 @@
-import React, { Component } from 'react';
 import {
-  Text,
-  Animated,
-  View,
-  TouchableOpacity,
-  TouchableWithoutFeedback,
   ActivityIndicator,
+  Animated,
   BackHandler,
   Modal,
   Platform,
+  Text,
+  TouchableOpacity,
+  TouchableWithoutFeedback,
+  View,
 } from 'react-native';
+import React, { Component } from 'react';
 
 import PropTypes from 'prop-types';
-
 import styles from './styles';
 
 const HwBackHandler = BackHandler;
@@ -34,7 +33,10 @@ export default class AwesomeAlert extends Component {
   }
 
   componentDidMount() {
-    HwBackHandler.addEventListener(HW_BACK_EVENT, this._handleHwBackEvent);
+    this.backHandlerSubscription = HwBackHandler.addEventListener(
+      HW_BACK_EVENT,
+      this._handleHwBackEvent
+    );
   }
 
   _springShow = (fromConstructor) => {
@@ -228,7 +230,9 @@ export default class AwesomeAlert extends Component {
   }
 
   componentWillUnmount() {
-    HwBackHandler.removeEventListener(HW_BACK_EVENT, this._handleHwBackEvent);
+    if (this.backHandlerSubscription) {
+      this.backHandlerSubscription.remove();
+    }
   }
 }
 
