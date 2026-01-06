@@ -1,24 +1,7 @@
 {
-  "name": "react-native-awesome-alerts",
-  "version": "2.0.0",
+  "name": "react-native-awesome-alerts-jd",
+  "version": "1.0.0",
   "description": "Awesome alert for React Native iOS, android and web",
-  "main": "index.js",
-  "types": "index.d.ts",
-  "scripts": {
-    "test": "node node_modules/jest/bin/jest.js --watch"
-  },
-  "jest": {
-    "preset": "react-native",
-    "testPathIgnorePatterns": [
-      "/props.js",
-      "<rootDir>/node_modules"
-    ],
-    "timers": "fake"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rishabhbhatia/react-native-awesome-alerts.git"
-  },
   "keywords": [
     "react-native",
     "alerts",
@@ -26,12 +9,22 @@
     "iOS",
     "android"
   ],
-  "author": "rishabhbhatia",
-  "license": "ISC",
+  "homepage": "https://github.com/gabriel-klein/react-native-awesome-alerts#readme",
   "bugs": {
-    "url": "https://github.com/rishabhbhatia/react-native-awesome-alerts/issues"
+    "url": "https://github.com/gabriel-klein/react-native-awesome-alerts/issues"
   },
-  "homepage": "https://github.com/rishabhbhatia/react-native-awesome-alerts#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabriel-klein/react-native-awesome-alerts.git"
+  },
+  "license": "ISC",
+  "author": "gabriel-klein",
+  "type": "commonjs",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "node node_modules/jest/bin/jest.js --watch"
+  },
   "dependencies": {
     "prop-types": "^15.7.2"
   },
@@ -44,5 +37,13 @@
     "react": "^16.14.0",
     "react-native": "~0.64.1",
     "react-test-renderer": "^16.14.0"
+  },
+  "jest": {
+    "preset": "react-native",
+    "testPathIgnorePatterns": [
+      "/props.js",
+      "<rootDir>/node_modules"
+    ],
+    "timers": "fake"
   }
 }
